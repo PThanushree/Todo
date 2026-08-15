@@ -1,0 +1,61 @@
+:root {
+  --ink: #10131a;
+  --ink-raised: #171b24;
+  --paper: #f4efe3;
+  --paper-dim: #e9e2d1;
+  --brass: #c9a227;
+  --brass-dim: #a9862264;
+  --forest: #4b6455;
+  --text-ink: #1b1b18;
+  --text-slate: #6b6558;
+  --text-paper-muted: #9a9486;
+  --danger: #a8462f;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--ink);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 50% -10%, #1e2330 0%, transparent 60%);
+  color: var(--paper);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
